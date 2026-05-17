@@ -18,7 +18,7 @@ export default function Welcome({ onDone }) {
       {/* Background Image Container with Ken Burns effect */}
       <div className="welcome-bg-wrap">
         <img 
-          src={process.env.PUBLIC_URL + '/jeanne-pelegrin-GMTVvfVLJDk-unsplash.jpg'} 
+          src={process.env.PUBLIC_URL + '/rumman-amin-ufPyadx1z_E-unsplash.jpg'} 
           alt="Moroccan Medina Artisan" 
           className="welcome-bg-image"
         />
