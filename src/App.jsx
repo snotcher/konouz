@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Splash from './components/Splash';
+import Welcome from './components/Welcome';
 import Home from './components/Home';
 import Explore from './components/Explore';
 import Orders from './components/Orders';
@@ -30,7 +31,17 @@ function AppContent() {
     return (
       <div className="phone-frame">
         <div className="dynamic-island"></div>
-        <Splash onDone={() => setActiveTab('home')} />
+        <Splash onDone={() => setActiveTab('welcome')} />
+        <div className="home-indicator"></div>
+      </div>
+    );
+  }
+
+  if (activeTab === 'welcome') {
+    return (
+      <div className="phone-frame">
+        <div className="dynamic-island"></div>
+        <Welcome onDone={() => setActiveTab('home')} />
         <div className="home-indicator"></div>
       </div>
     );

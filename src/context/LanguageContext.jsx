@@ -4,6 +4,11 @@ const translations = {
   en: {
     splashSubtitle: 'Treasures of Morocco',
     splashTap: 'tap to begin',
+    welcomeTitle: 'The Heritage of Morocco',
+    welcomeSubtitle: 'Discover an authentic collection of handmade treasures, direct from the heart of historic medinas to your home.',
+    welcomeCTA: 'Explore the Treasures',
+    welcomeSecondaryCTA: 'Join as an Artisan',
+    comingSoon: 'Soon',
     goodMorning: 'Good morning',
     searchPlaceholder: 'Search crafts, artisans, cities…',
     artisanOfWeek: 'ARTISAN OF THE WEEK',
@@ -37,6 +42,11 @@ const translations = {
   fr: {
     splashSubtitle: 'Trésors du Maroc',
     splashTap: 'appuyez pour commencer',
+    welcomeTitle: 'L\'Héritage du Maroc',
+    welcomeSubtitle: 'Découvrez une collection authentique de trésors artisanaux, venus du cœur des médinas historiques jusqu\'à chez vous.',
+    welcomeCTA: 'Découvrir les Trésors',
+    welcomeSecondaryCTA: 'Rejoindre en tant qu\'Artisan',
+    comingSoon: 'Bientôt',
     goodMorning: 'Bonjour',
     searchPlaceholder: 'Rechercher artisanat, artisans, villes…',
     artisanOfWeek: 'ARTISAN DE LA SEMAINE',
