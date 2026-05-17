@@ -1,0 +1,40 @@
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background: #FFFFFF;
+  border-top: 1px solid var(--sand-dark);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 12px;
+  z-index: 100;
+  border-radius: 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  color: var(--ink-mid);
+  opacity: 0.45;
+  cursor: pointer;
+  transition: color 0.2s, opacity 0.2s;
+  user-select: none;
+}
+
+.nav-item.active {
+  color: var(--terracotta);
+  opacity: 1;
+}
+
+.nav-label {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}

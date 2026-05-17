@@ -1,0 +1,15 @@
+:root {
+  --terracotta: #C4714A;
+  --terracotta-dark: #9E5535;
+  --terracotta-light: #E8C4A8;
+  --sand: #F5ECD7;
+  --sand-dark: #E8D5B0;
+  --cream: #FAF5EC;
+  --ink: #2A1F14;
+  --ink-mid: #5C4433;
+  --gold: #B8924A;
+  --gold-light: #D4B06A;
+  --radius-card: 18px;
+  --radius-pill: 50px;
+  --radius-sm: 12px;
+}

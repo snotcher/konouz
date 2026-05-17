@@ -1,0 +1,347 @@
+/* ── Explore ── */
+.explorer {
+  scrollbar-width: none;
+}
+.explorer::-webkit-scrollbar { display: none; }
+
+.exp-header {
+  position: relative;
+  overflow: hidden;
+  background: var(--terracotta-dark);
+  padding: 52px 20px 24px;
+}
+.exp-header .zellige-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.12;
+  pointer-events: none;
+}
+.exp-greeting {
+  position: relative;
+  z-index: 1;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 13px;
+  color: #FAF5EC;
+  opacity: 0.8;
+  margin: 0 0 4px;
+}
+.exp-title {
+  position: relative;
+  z-index: 1;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  color: #FAF5EC;
+  margin: 0 0 12px;
+}
+.exp-search {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(250, 245, 236, 0.15);
+  border: 1px solid rgba(250, 245, 236, 0.25);
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+.search-icon {
+  color: #FAF5EC;
+  opacity: 0.6;
+  font-size: 16px;
+}
+.exp-search input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 13px;
+  color: #FAF5EC;
+}
+.exp-search input::placeholder {
+  color: #FAF5EC;
+  opacity: 0.6;
+}
+
+/* ── Region Pills ── */
+.region-row {
+  display: flex;
+  gap: 6px;
+  padding: 14px 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.region-row::-webkit-scrollbar { display: none; }
+
+.region-pill {
+  flex-shrink: 0;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  user-select: none;
+}
+.region-pill.active {
+  background: var(--terracotta);
+  color: #FAF5EC;
+  border: 1.5px solid var(--terracotta);
+}
+.region-pill:not(.active) {
+  background: transparent;
+  color: #5C4433;
+  border: 1px solid #E8D5B0;
+}
+
+/* ── Section Header ── */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 10px;
+}
+.section-header h2 {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--terracotta);
+  font-weight: 500;
+  margin: 0;
+}
+.see-all {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.see-all:hover { opacity: 0.7; }
+
+/* ── Category Cards ── */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 0 20px 8px;
+}
+.cat-card {
+  background: #FAF5EC;
+  border: 1px solid #E8D5B0;
+  border-radius: 14px;
+  padding: 14px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.cat-card:hover {
+  transform: translateY(-2px);
+}
+.cat-card.active {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+}
+.cat-card.active .cat-card-icon { color: #FAF5EC; }
+.cat-card.active .cat-card-label { color: #FAF5EC; }
+.cat-card.active .cat-card-label-ar { color: rgba(250,245,236,0.6); }
+
+.cat-card-icon {
+  color: var(--terracotta);
+  transition: color 0.2s;
+}
+.cat-card-label {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--ink);
+  text-align: center;
+  transition: color 0.2s;
+}
+.cat-card-label-ar {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 8px;
+  color: #5C4433;
+  text-align: center;
+  transition: color 0.2s;
+}
+
+/* ── Products Grid ── */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding: 0 20px 24px;
+}
+
+.product-card {
+  background: #FFFFFF;
+  border: 1px solid #E8D5B0;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+.product-card:hover {
+  transform: translateY(-2px);
+}
+
+.p-img-wrap {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+.p-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.p-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: var(--terracotta);
+  color: #FAF5EC;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.p-body {
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.p-cat {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #5C4433;
+  margin: 0;
+}
+.p-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--ink);
+  margin: 0;
+}
+.p-city {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 10px;
+  color: #5C4433;
+  margin: 0;
+}
+.p-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: var(--gold);
+  margin: 4px 0 0;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: #5C4433;
+  text-align: center;
+  padding: 40px 20px;
+  font-style: italic;
+}
+
+/* ── Featured Artisans ── */
+.exp-artisan-strip {
+  display: flex;
+  gap: 12px;
+  padding: 0 20px 100px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.exp-artisan-strip::-webkit-scrollbar { display: none; }
+
+.exp-art-card {
+  flex-shrink: 0;
+  width: 130px;
+  min-height: 170px;
+  border-radius: 16px;
+  background: #FAF5EC;
+  border: 1px solid #E8D5B0;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+.exp-art-card:hover {
+  transform: translateY(-2px);
+}
+
+.exp-art-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  color: #FAF5EC;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.v-badge {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 9px;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 4px;
+}
+.v-badge svg {
+  width: 10px;
+  height: 10px;
+}
+
+.ea-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ink);
+  text-align: center;
+  margin: 0;
+}
+.ea-city {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 10px;
+  color: #5C4433;
+  text-align: center;
+  margin: 0;
+}
+.ea-craft {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--terracotta);
+  text-align: center;
+  margin: 0;
+}

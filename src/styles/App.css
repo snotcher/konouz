@@ -1,0 +1,94 @@
+.phone-frame {
+  width: 420px;
+  height: 900px;
+  background: var(--cream);
+  border-radius: 56px;
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+  border: 12px solid #1a1a1c;
+  box-shadow: 
+    0 0 0 4px #4c4c4e,
+    0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.screen-inner {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 80px;
+  scrollbar-width: none;
+}
+
+.screen-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.dynamic-island {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 30px;
+  background: #1a1a1c;
+  border-radius: 20px;
+  z-index: 200;
+  pointer-events: none;
+}
+
+.home-indicator {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 5px;
+  background: #2a1f14;
+  opacity: 0.8;
+  border-radius: 10px;
+  z-index: 200;
+  pointer-events: none;
+}
+
+/* ── Custom Toast Notification ── */
+.custom-toast-notification {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  right: 20px;
+  background: var(--cream);
+  border: 1px solid var(--sand-dark);
+  border-radius: 30px;
+  padding: 10px 16px;
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: slideDownFade 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes slideDownFade {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.toast-icon {
+  font-size: 16px;
+}
+
+.toast-text {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.3;
+}
