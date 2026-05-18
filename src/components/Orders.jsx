@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Bell, Phone, ChevronRight, Check, MessageCircle } from 'lucide-react';
+import React from 'react';
+import { Bell, Check } from 'lucide-react';
 import ZelligeBg from './ZelligeBg';
 import { useCart } from '../context/CartContext';
 import '../styles/Orders.css';
@@ -14,7 +14,7 @@ const timelineSteps = [
 
 export default function Orders({ onNavigate }) {
   const { activeOrder, pastOrders } = useCart();
-  const [showCourier, setShowCourier] = useState(false);
+
 
   const activeStep = activeOrder ? activeOrder.step : 3;
   const hasOrders = !!activeOrder;
@@ -92,13 +92,7 @@ export default function Orders({ onNavigate }) {
               })}
             </div>
 
-            <div className="contact-row" onClick={() => setShowCourier(true)}>
-              <div className="contact-left">
-                <Phone size={16} className="contact-icon" />
-                <span className="contact-text">Contact Courier</span>
-              </div>
-              <ChevronRight size={16} className="contact-arrow" />
-            </div>
+
           </div>
 
           <div className="past-orders-section">
@@ -122,73 +116,7 @@ export default function Orders({ onNavigate }) {
         </>
       )}
 
-      {showCourier && (
-        <div className="courier-overlay" onClick={() => setShowCourier(false)}>
-          <div className="courier-sheet" onClick={(e) => e.stopPropagation()}>
-            <div className="handle-bar"></div>
-            
-            <div className="courier-header">
-              <div className="courier-header-left">
-                <span className="courier-kicker">YOUR COURIER</span>
-                <h3 className="courier-name">Mohammed Idrissi</h3>
-                <span className="courier-city">📍 Currently in {activeOrder.city} Medina</span>
-              </div>
-              <div className="courier-avatar">
-                <span className="courier-initials">MI</span>
-              </div>
-            </div>
 
-            <div className="courier-status-pill">
-              <div className="pulse-dot"></div>
-              <span className="status-text">
-                {activeOrder.step === 1 ? 'Order placed · Preparing your items' : 'Picked up your order · On the way'}
-              </span>
-            </div>
-
-            <div className="courier-contact-options">
-              <div className="contact-row" onClick={() => setShowCourier(false)}>
-                <div className="contact-icon-circle phone-tint">
-                  <Phone size={20} className="icon-terracotta" />
-                </div>
-                <div className="contact-row-middle">
-                  <p className="contact-action">Call Courier</p>
-                  <p className="contact-detail">+212 6 12 34 56 78</p>
-                </div>
-                <ChevronRight size={16} className="chevron-tint" />
-              </div>
-
-              <div className="contact-row" onClick={() => setShowCourier(false)}>
-                <div className="contact-icon-circle gold-tint">
-                  <MessageCircle size={20} className="icon-gold" />
-                </div>
-                <div className="contact-row-middle">
-                  <p className="contact-action">Send Message</p>
-                  <p className="contact-detail">Write to your courier</p>
-                </div>
-                <ChevronRight size={16} className="chevron-tint" />
-              </div>
-            </div>
-
-            <div className="delivery-info-strip">
-              <div className="info-strip-row">
-                <span className="strip-label">Estimated arrival</span>
-                <span className="strip-value-garamond">
-                  {activeOrder.step === 1 ? '3–5 Business Days' : 'Today, 4:30 PM'}
-                </span>
-              </div>
-              <div className="strip-divider"></div>
-              <div className="info-strip-row">
-                <span className="strip-label">Order ID</span>
-                <span className="strip-value-tajawal">{activeOrder.id}</span>
-              </div>
-            </div>
-
-            <button className="courier-close-btn" onClick={() => setShowCourier(false)}>
-              Close
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
